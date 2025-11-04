@@ -22,4 +22,4 @@ yarn dev
 
 4.- Es el complemeto de fin-seccion-15 de teslo-, que hace las veces de clente para hacer las pruebas de Websockets.
 
-5.- No se debe cerrarña terminal depues de ejecutar el 3er. paso ya que no funciona.
+5.- No se debe cerrar terminal depues de ejecutar el 3er. paso ya que no funciona.
