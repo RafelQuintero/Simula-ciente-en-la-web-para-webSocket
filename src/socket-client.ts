@@ -7,12 +7,16 @@ let socket: Socket;
 //Crearemos una funcion que la utilzare para hacer la conexxion con el servidor
 export const connectToServer = (token: string) => {
   // http://localhost:3000/socket.io/socket.io.js
-  const manager = new Manager("http://localhost:3000/socket.io/socket.io.js", {
-    extraHeaders: {
-      hola: "mundo",
-      authentication: token, //aqui enviamos el jwt al servidor para que lo valide
-    },
-  });
+  // const manager = new Manager("http://localhost:3000/socket.io/socket.io.js", {
+  const manager = new Manager(
+    "https://teslo-shop-ktv7.onrender.com/socket.io/socket.io.min.js",
+    {
+      extraHeaders: {
+        hola: "mundo",
+        authentication: token, //aqui enviamos el jwt al servidor para que lo valide
+      },
+    }
+  );
   //Aseguremos que si existe el socket o es null , eliminaremos los listeners que pueda tener el socket antes de agregar nuevos listeners
   socket?.removeAllListeners();
 
